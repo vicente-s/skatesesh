@@ -1,0 +1,2 @@
+class SkatespotFave < ApplicationRecord
+end
