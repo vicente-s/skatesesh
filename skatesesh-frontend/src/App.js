@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom'
-import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home'
 import Login from './components/Login'
 
 class App extends Component {
+
+  state = {
+    user: {}
+  }
+
   render() {
     return (
       <div>
