@@ -12,7 +12,7 @@ class SignUpForm extends Component {
     })
   }
 
-  submitHandler = (e, user) => {
+  createUser = (e, user) => {
     e.preventDefault()
     fetch('http://localhost:3000/users', {
       method:'Post',
@@ -20,7 +20,7 @@ class SignUpForm extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        username: this.state.username
+        user: this.state.user
       })
     }).then(resp => resp.json())
     .then(console.log)
@@ -28,7 +28,7 @@ class SignUpForm extends Component {
 
   render() {
     return   (
-      <form className="SignUpForm" onSubmit={(e) => this.submitHandler(e, this.state)}>
+      <form className="SignUpForm" onSubmit={(e) => this.createUser(e, this.state)}>
         <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.changeHandler}/><br/>
         <input type="submit" value="Sign Up" />
       </form>
