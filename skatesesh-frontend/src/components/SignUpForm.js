@@ -3,7 +3,8 @@ import React, {Component} from 'react'
 class SignUpForm extends Component {
 
   state = {
-    username: ""
+    username: "",
+    password: ""
   }
 
   changeHandler = (e) => {
@@ -14,13 +15,17 @@ class SignUpForm extends Component {
 
   createUser = (e, user) => {
     e.preventDefault()
-    fetch('http://localhost:3000/users', {
+    fetch('http://localhost:3000/api/v1/users', {
       method:'Post',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Accept: 'aaplication/json'
       },
       body: JSON.stringify({
-        user: this.state.user
+        user: {
+          username: this.state.username,
+          password: this.state.password
+        }
       })
     }).then(resp => resp.json())
     .then(console.log)
@@ -30,6 +35,7 @@ class SignUpForm extends Component {
     return   (
       <form className="SignUpForm" onSubmit={(e) => this.createUser(e, this.state)}>
         <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.changeHandler}/><br/>
+        <input type="text" placeholder="Password" name="password" value={this.state.password} onChange={this.changeHandler}/><br/>
         <input type="submit" value="Sign Up" />
       </form>
     )
