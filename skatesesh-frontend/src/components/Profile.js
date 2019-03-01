@@ -2,7 +2,19 @@ import React, {Component} from 'react'
 
 class Profile extends Component {
   render() {
-    return <h1>Hello {this.props.username}</h1>
+    return (
+      <div>
+        
+        <div className="UserSection">
+          <img className="UserImage"/>
+          <div className="UserSkateSpots">
+
+          </div>
+        </div>
+        <div className="SkateSection">
+        </div>
+      </div>
+    )
   }
 }
 
