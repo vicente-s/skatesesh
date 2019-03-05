@@ -8,7 +8,7 @@ class SkateSection extends Component {
     return (
       <div className="SkateSection">
         <div className="SkateMap">
-        <Map userLocation={this.props.userLocation}/>
+          <Map userLocation={this.props.userLocation}/>
         </div>
         <SkateSpotInfo />
       </div>

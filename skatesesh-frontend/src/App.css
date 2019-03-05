@@ -122,8 +122,6 @@ input[type=submit] {
 }
 
 .SkateMap {
-  height: 500px;
-  width: 500px;
   margin-top: 50px;
   margin-left: 50px;
   float:left;
