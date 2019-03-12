@@ -13,7 +13,6 @@ class App extends Component {
 
   submitHandler = (e, user) => {
     e.preventDefault()
-    console.log("reached")
     fetch('http://localhost:3000/api/v1/login', {
       method: 'POST',
       headers: {
@@ -27,16 +26,19 @@ class App extends Component {
       .then(json => {
         localStorage.setItem('token', json.jwt)
         let token = localStorage.getItem('token')
-        fetch("http://localhost:3000/api/v1/current_user", {
+        fetch("http://localhost:3000/api/v1/profile", {
         headers: {
           "Content-Type": "application/json",
           "Accepts":  "application/json",
           Authorization: token
         }
-      })
-        .then(console.log)
+      }).then(resp => resp.json())
+        .then(json => {
+          this.setState({
+            user: json
+          })
+        })
     })
-
   }
 
   render() {

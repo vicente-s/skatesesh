@@ -1,5 +1,5 @@
 class Api::V1::AuthController < ApplicationController
-  skip_before_action :authorized, only: [:create, :show]
+  skip_before_action :authorized, only: [:create]
 
   def create
   @user = User.find_by(username: user_login_params[:username])
@@ -11,14 +11,6 @@ class Api::V1::AuthController < ApplicationController
     end
   end
 
-  def show
-    auth_string = request.authorization
-    # if @user
-    #   render json: { user_id: @user.id, user_name: @user.username}
-    # else
-    #   render json: { error: "ERROR"}, status: 422
-    # end
-  end
 
 private
 
