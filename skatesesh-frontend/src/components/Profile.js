@@ -3,37 +3,39 @@ import SkateSection from './SkateSection'
 
 class Profile extends Component {
   state = {
-    currentPosition: {
-      lat: "",
-      lng: ""
-    },
+    currentPosition: {},
     skateSpots: []
-    };
+    }
+
+
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition((position) => {
-      this.setState( {
+      this.setState({
         currentPosition: {
           lat: position.coords.latitude,
           lng: position.coords.longitude
-        }
+          }
       })
     })
-    this.getSkateParks()
-  };
+    console.log(this.state.currentPosition)
+  }
 
-getSkateParks() {
+  getSkateParks = () => {
+  // fetch here with currentPosition
+  // post to backend /search
   fetch('http://localhost:3000/search', {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-type': 'application/json',
+      'Content-Type': 'application/json',
       'Accept': 'application/json'
     },
     body: JSON.stringify(this.state.currentPosition)
-  }).then(resp => resp.json())
-    .then(json => this.setState({
-      skateSpots: json
-    }))
+  })
+  .then(res => res.json())
+  .then(json => this.setState({
+    skateSpots: json
+  }))
 }
 
   render() {
@@ -42,6 +44,7 @@ getSkateParks() {
         <div className="UserSection">
           <img className="UserImage"/>
           <div className="UserSkateSpots">
+            No Saved SkateSpots
           </div>
         </div>
         <SkateSection userLocation={this.state.currentPosition}/>

@@ -3,9 +3,8 @@ import { GoogleMap, withGoogleMap } from 'react-google-maps'
 
 class Map extends Component {
   render() {
-
     const SkateMap = withGoogleMap(props => (
-      <GoogleMap 
+      <GoogleMap className="SkateMap"
         defaultCenter = { this.props.userLocation }
         defaultZoom = { 13 }
         >

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, withRouter} from 'react-router-dom'
 import './App.css';
 import Home from './components/Home'
 import Login from './components/Login'
@@ -10,6 +10,7 @@ class App extends Component {
   state = {
     user: {}
   }
+
 
   submitHandler = (e, user) => {
     e.preventDefault()
@@ -38,6 +39,7 @@ class App extends Component {
             user: json
           })
         })
+        console.log(this)
     })
   }
 
@@ -54,4 +56,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
