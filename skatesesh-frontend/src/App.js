@@ -39,7 +39,7 @@ class App extends Component {
             user: json
           })
         })
-        console.log(this)
+        
     })
   }
 

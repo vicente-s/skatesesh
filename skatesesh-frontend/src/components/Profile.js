@@ -7,8 +7,6 @@ class Profile extends Component {
     skateSpots: []
     }
 
-
-
   componentDidMount() {
     navigator.geolocation.getCurrentPosition((position) => {
       this.setState({
@@ -18,7 +16,7 @@ class Profile extends Component {
           }
       })
     })
-    console.log(this.state.currentPosition)
+    this.getSkateParks()
   }
 
   getSkateParks = () => {
@@ -39,10 +37,11 @@ class Profile extends Component {
 }
 
   render() {
+    {this.getSkateParks()}
     return (
       <div>
         <div className="UserSection">
-          <img className="UserImage"/>
+          <img className="UserImage" alt= "User Image" />
           <div className="UserSkateSpots">
             No Saved SkateSpots
           </div>
