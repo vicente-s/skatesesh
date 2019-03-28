@@ -5,21 +5,12 @@ import SignUpForm from './SignUpForm'
 class Home extends Component {
   render() {
     return   (
-      <div>
-        <div className="WelcomeBar">
-        skatesesh
-        <Link className="Link" to="login">Login</Link>
+        <div className="container-fluid">
+          <div className="navbar">
+            <button className="btn navbarButton">button</button>
+          </div>
+          <SignUpForm />
         </div>
-          <section className="Container">
-            <div className="AboutUs">
-            <h1>About</h1>
-            </div>
-            <div className="SignUpContainer">
-            <h1>Sign Up</h1>
-            <SignUpForm />
-            </div>
-          </section>
-      </div>
     )
   }
 }

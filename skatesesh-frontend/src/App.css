@@ -138,3 +138,12 @@ input[type=submit] {
   border-radius: 15px;
   text-align: center;
 }
+
+.navbar {
+  height: 40px;
+  background-color: black;
+}
+
+.navbarButton {
+  color: white;
+}
