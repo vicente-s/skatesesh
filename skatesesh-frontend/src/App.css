@@ -69,10 +69,11 @@ input[type=submit] {
 
 .SkateSection {
   background-color: black;
+  size: cover;
 }
 
 .SkateSpotInfo {
-  background-color: white;
+  background-color: gray;
   height: 480px;
   width: 480px;
   border-radius: 15px;

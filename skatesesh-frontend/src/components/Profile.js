@@ -37,7 +37,7 @@ componentWillMount() {
 
       <div>
         <div className="navbar">
-          <button> Log Out </button>
+          <button className="navbarButton btn-default"> Log Out </button>
         </div>
           <div className="container SkateSpotsContainer">
 
