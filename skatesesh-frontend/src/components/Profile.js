@@ -3,49 +3,46 @@ import SkateSection from './SkateSection'
 
 class Profile extends Component {
   state = {
-    currentPosition: {},
+    currentLocation: {},
     skateSpots: []
     }
 
-  componentDidMount() {
+componentWillMount() {
     navigator.geolocation.getCurrentPosition((position) => {
       this.setState({
-        currentPosition: {
+        currentLocation: {
           lat: position.coords.latitude,
           lng: position.coords.longitude
           }
       })
+      fetch('http://localhost:3000/search', {
+        method: "POST",
+        headers: {
+          'Content-Type' : 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        })
+      })
     })
-    this.getSkateParks()
+
   }
 
-  getSkateParks = () => {
-  // fetch here with currentPosition
-  // post to backend /search
-  fetch('http://localhost:3000/search', {
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    },
-    body: JSON.stringify(this.state.currentPosition)
-  })
-  .then(res => res.json())
-  .then(json => this.setState({
-    skateSpots: json
-  }))
-}
+
 
   render() {
-    {this.getSkateParks()}
     return (
+
       <div>
-        <div className="UserSection">
-          <img className="UserImage" alt= "User Image" />
-          <div className="UserSkateSpots">
-            No Saved SkateSpots
-          </div>
+        <div className="navbar">
+          <button> Log Out </button>
         </div>
+          <div className="container SkateSpotsContainer">
+
+          </div>
+        <hr />
         <SkateSection userLocation={this.state.currentPosition}/>
       </div>
     )
