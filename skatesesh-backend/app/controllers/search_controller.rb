@@ -5,15 +5,22 @@ skip_before_action :authorized, only: [:create]
 
       response = RestClient.get "https://maps.googleapis.com/maps/api/place/nearbysearch/json?name=skatepark&location=#{params["lat"]},#{params["lng"]}&radius=2500&type=skatepark&keyword=skatepark&key=#{ENV['GOOGLE_KEY']}"
       parsed_response = JSON.parse(response)
-      # results[0]["geoetry"]["location"]
-
       results = parsed_response["results"]
 
-      results.each do |skatepark|
-        byebug
-      end
+      new_results = results.collect { |skatepark|
+        {
+          skatepark["name"] => {
+              "location" => skatepark["geometry"]["location"],
+              "rating" => skatepark["rating"],
+              "vicinity" => skatepark["vicinity"]
+            }
+        }
+      }
 
-      0
+      # results[skatepark]["name"]
+      # results[skatepark]["rating"]
+      # results[skatepark]["vicinity"]
+      render json: new_results.to_json
     end
 
 

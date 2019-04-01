@@ -70,11 +70,12 @@ input[type=submit] {
 .SkateSection {
   background-color: black;
   size: cover;
+  position: absolute;
 }
 
 .SkateSpotInfo {
+  margin-top: 50px;
   background-color: gray;
-  height: 480px;
   width: 480px;
   border-radius: 15px;
   text-align: center;
@@ -100,5 +101,9 @@ input[type=submit] {
 }
 
 .SkateSpotsContainer {
-  height:20px;
+  height:100px;
+}
+
+.SkateMap {
+  margin-left: 50px;
 }

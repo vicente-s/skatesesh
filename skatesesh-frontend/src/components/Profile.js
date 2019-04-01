@@ -7,7 +7,7 @@ class Profile extends Component {
     skateSpots: []
     }
 
-componentWillMount() {
+componentDidMount() {
     navigator.geolocation.getCurrentPosition((position) => {
       this.setState({
         currentLocation: {
@@ -26,6 +26,10 @@ componentWillMount() {
           lng: position.coords.longitude
         })
       })
+        .then(resp => resp.json())
+        .then(json => this.setState({
+          skateSpots: json
+        }))
     })
 
   }
@@ -33,16 +37,15 @@ componentWillMount() {
 
 
   render() {
+    {console.log(this.currentLocation)}
     return (
-
       <div>
         <div className="navbar">
           <button className="navbarButton btn-default"> Log Out </button>
         </div>
-          <div className="container SkateSpotsContainer">
-
+          <div className="SkateSpotsContainer inline-block shadow-sm p-3 mb-5 bg-white rounded">
+            No Spots
           </div>
-        <hr />
         <SkateSection userLocation={this.state.currentPosition}/>
       </div>
     )
