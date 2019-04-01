@@ -4,29 +4,26 @@ import SkateSection from './SkateSection'
 class Profile extends Component {
   state = {
     currentLocation: {},
-    skateSpots: []
+    skateSpots: [],
+    selectedSkateSpot: {}
     }
 
-componentDidMount() {
+  componentDidMount() {
     navigator.geolocation.getCurrentPosition((position) => {
       this.setState({
         currentLocation: {
           lat: position.coords.latitude,
           lng: position.coords.longitude
-          }
+        }
       })
       fetch('http://localhost:3000/search', {
         method: "POST",
         headers: {
           'Content-Type' : 'application/json',
-          'Accept': 'application/json'
+          'Accept' : 'application/json'
         },
-        body: JSON.stringify({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        })
-      })
-        .then(resp => resp.json())
+        body: JSON.stringify(this.state.currentLocation)
+      }).then(resp => resp.json())
         .then(json => this.setState({
           skateSpots: json
         }))
@@ -34,10 +31,14 @@ componentDidMount() {
 
   }
 
-
+  selectSkateSpot = (skateSpot) => {
+    this.setState({
+      selectedSkateSpot : skateSpot
+    })
+  }
 
   render() {
-    {console.log(this.currentLocation)}
+
     return (
       <div>
         <div className="navbar">
@@ -46,7 +47,7 @@ componentDidMount() {
           <div className="SkateSpotsContainer inline-block shadow-sm p-3 mb-5 bg-white rounded">
             No Spots
           </div>
-        <SkateSection userLocation={this.state.currentPosition}/>
+        <SkateSection userLocation={this.state.currentLocation} skateSpots={this.state.skateSpots} selectSkateSpot={this.selectSkateSpot} selectedSkateSpot={this.state.selectedSkateSpot}/>
       </div>
     )
   }
