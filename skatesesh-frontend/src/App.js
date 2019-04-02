@@ -39,8 +39,8 @@ class App extends Component {
             user: json
           })
         })
-
     })
+    window.location.href = "/profile"
   }
 
   render() {

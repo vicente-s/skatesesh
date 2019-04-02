@@ -8,7 +8,7 @@ class Profile extends Component {
     selectedSkateSpot: {}
     }
 
-  componentDidMount() {
+  componentWillMount() {
     navigator.geolocation.getCurrentPosition((position) => {
       this.setState({
         currentLocation: {
@@ -22,30 +22,34 @@ class Profile extends Component {
           'Content-Type' : 'application/json',
           'Accept' : 'application/json'
         },
-        body: JSON.stringify(this.state.currentLocation)
+        body: JSON.stringify({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        })
       }).then(resp => resp.json())
         .then(json => this.setState({
           skateSpots: json
         }))
     })
 
+
   }
 
   selectSkateSpot = (skateSpot) => {
     this.setState({
-      selectedSkateSpot : skateSpot
+      selectedSkateSpot: skateSpot
     })
+    console.log(this.state.selectedSkateSpot)
   }
 
   render() {
-
     return (
       <div>
         <div className="navbar">
           <button className="navbarButton btn-default"> Log Out </button>
         </div>
           <div className="SkateSpotsContainer inline-block shadow-sm p-3 mb-5 bg-white rounded">
-            No Spots
+            No Saved Spots
           </div>
         <SkateSection userLocation={this.state.currentLocation} skateSpots={this.state.skateSpots} selectSkateSpot={this.selectSkateSpot} selectedSkateSpot={this.state.selectedSkateSpot}/>
       </div>

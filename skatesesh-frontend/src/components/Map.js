@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { GoogleMap, withGoogleMap, withScriptjs } from 'react-google-maps'
+import { GoogleMap, withGoogleMap,} from 'react-google-maps'
 import SkateSpotMarker from './SkateSpotMarker'
 
 class Map extends Component {
   render() {
 
-    let markers = this.props.skateSpots.map(skatespot => <SkateSpotMarker location={skatespot.location} selectSkateSpot={this.props.selectSkateSpot}/>)
+    const markers = this.props.skateSpots.map(skatespot => <SkateSpotMarker skateSpot={skatespot} selectSkateSpot={this.props.selectSkateSpot}/>)
     const SkateMap = withGoogleMap(props => (
       <GoogleMap className= "SkateMap"
         defaultCenter = { this.props.userLocation }
-        defaultZoom = { 13 } >
+        defaultZoom = { 13 }>
         {markers}
       </GoogleMap>
     ))
