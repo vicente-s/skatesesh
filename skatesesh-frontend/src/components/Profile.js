@@ -43,13 +43,17 @@ class Profile extends Component {
   }
 
   render() {
+    let savedSkateSpots = ["LES SkatePark", "FatKid SkatePark"].map(skatespot =>
+      <div className="col container rounded">{skatespot}</div>
+    )
+
     return (
       <div>
         <div className="navbar">
           <button className="navbarButton btn-default"> Log Out </button>
         </div>
-          <div className="SkateSpotsContainer inline-block shadow-sm p-3 mb-5 bg-white rounded">
-            No Saved Spots
+          <div className="SkateSpotsContainer row">
+            {savedSkateSpots}
           </div>
         <SkateSection userLocation={this.state.currentLocation} skateSpots={this.state.skateSpots} selectSkateSpot={this.selectSkateSpot} selectedSkateSpot={this.state.selectedSkateSpot}/>
       </div>
