@@ -16,7 +16,7 @@ class SkateSection extends Component {
             <Map userLocation={this.props.userLocation} skateSpots={this.props.skateSpots} selectSkateSpot={this.props.selectSkateSpot} selectedSkateSpot={this.props.selectedSkateSpot}/>
             </div>
             <div className="col">
-          <SkateSpotInfo selectedSkateSpot={this.props.selectedSkateSpot}/>
+              <SkateSpotInfo selectedSkateSpot={this.props.selectedSkateSpot}/>
             </div>
         </div>
       </div>
