@@ -6,17 +6,6 @@
   height: 700px;
 }
 
-
-.UserImage {
-  height: 180px;
-  width: 180px;
-  background-color: red;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  border-radius: 40px;
-}
-
 .SignUpForm {
   background-color: #FFFCFC;
   height: 200px;
@@ -28,7 +17,6 @@
 }
 
 .SkateSection {
-  background-color: black;
   size: cover;
   position: absolute;
 }
@@ -42,14 +30,19 @@
 }
 
 .navbar {
-  height: 60px;
-  background-color: white;
+  height: 50px;
+  background-color: black;
+  color: white;
 }
 
-.navbarButton {
-  color: black;
-  background-color: white;
-  border-radius: 5px;
+.savedSkateSpots {
+  margin-top: 20px;
+  margin-right: 80px;
+  float: right;
+  height: 170px;
+  width: 900px;
+  border-radius: 9px;
+  border-style: solid;
 }
 .loginFormContainer {
   padding-top: 100px;
@@ -59,10 +52,6 @@
   height: 650px;
 }
 
-/* .SkateSpotsContainer {
-  height:100px;
-} */
-
 .SkateMap {
   margin-left: 50px;
 }
@@ -71,6 +60,10 @@
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  border-style: solid;
   background-image: url('haroldHunter.jpeg');
   background-size: 100% 100% ;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 5px;
 }

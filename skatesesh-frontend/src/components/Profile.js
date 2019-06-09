@@ -46,7 +46,14 @@ class Profile extends Component {
 
     return (
       <div>
-        <img className="profilePicture"/>
+        <navbar className='navbar'>
+          LogOut
+        </navbar>
+        <img className='profilePicture'/>
+        <div className='savedSkateSpots'>
+          Saved Skatespots
+        </div>
+        <hr/>
         <SkateSection userLocation={this.state.currentLocation} skateSpots={this.state.skateSpots} selectSkateSpot={this.selectSkateSpot} selectedSkateSpot={this.state.selectedSkateSpot}/>
       </div>
     )
