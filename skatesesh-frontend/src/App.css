@@ -59,10 +59,18 @@
   height: 650px;
 }
 
-.SkateSpotsContainer {
+/* .SkateSpotsContainer {
   height:100px;
-}
+} */
 
 .SkateMap {
   margin-left: 50px;
+}
+
+.profilePicture {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-image: url('haroldHunter.jpeg');
+  background-size: 100% 100% ;
 }

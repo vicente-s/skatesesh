@@ -8,32 +8,32 @@ class Profile extends Component {
     selectedSkateSpot: {}
     }
 
-  componentWillMount() {
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.setState({
-        currentLocation: {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        }
-      })
-      fetch('http://localhost:3000/search', {
-        method: "POST",
-        headers: {
-          'Content-Type' : 'application/json',
-          'Accept' : 'application/json'
-        },
-        body: JSON.stringify({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        })
-      }).then(resp => resp.json())
-        .then(json => this.setState({
-          skateSpots: json
-        }))
-    })
-
-
-  }
+  // componentWillMount() {
+  //   navigator.geolocation.getCurrentPosition((position) => {
+  //     this.setState({
+  //       currentLocation: {
+  //         lat: position.coords.latitude,
+  //         lng: position.coords.longitude
+  //       }
+  //     })
+  //     fetch('http://localhost:3000/search', {
+  //       method: "POST",
+  //       headers: {
+  //         'Content-Type' : 'application/json',
+  //         'Accept' : 'application/json'
+  //       },
+  //       body: JSON.stringify({
+  //         lat: position.coords.latitude,
+  //         lng: position.coords.longitude
+  //       })
+  //     }).then(resp => resp.json())
+  //       .then(json => this.setState({
+  //         skateSpots: json
+  //       }))
+  //   })
+  //
+  //
+  // }
 
   selectSkateSpot = (skateSpot) => {
     this.setState({
@@ -43,18 +43,10 @@ class Profile extends Component {
   }
 
   render() {
-    let savedSkateSpots = ["LES SkatePark", "FatKid SkatePark"].map(skatespot =>
-      <div className="col container rounded">{skatespot}</div>
-    )
 
     return (
       <div>
-        <div className="navbar">
-          <button className="navbarButton btn-default"> Log Out </button>
-        </div>
-          <div className="SkateSpotsContainer row">
-            {savedSkateSpots}
-          </div>
+        <img className="profilePicture"/>
         <SkateSection userLocation={this.state.currentLocation} skateSpots={this.state.skateSpots} selectSkateSpot={this.selectSkateSpot} selectedSkateSpot={this.state.selectedSkateSpot}/>
       </div>
     )
