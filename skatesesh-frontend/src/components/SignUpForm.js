@@ -33,11 +33,17 @@ class SignUpForm extends Component {
 
   render() {
     return   (
-      <form onSubmit={(e) => this.createUser(e, this.state)}>
-        <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.changeHandler}/><br/>
-        <input type="text" placeholder="Password" name="password" value={this.state.password} onChange={this.changeHandler}/><br/>
-        <input type="submit" value="Sign Up" />
-      </form>
+        <div className="SignUpForm">
+          <form onSubmit={(e) => this.createUser(e, this.state)}>
+            <br/>
+            <h5>Username</h5>
+            <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.changeHandler}/><br/>
+            <h5>Password</h5>
+            <input type="text" placeholder="Password" name="password" value={this.state.password} onChange={this.changeHandler}/><br/>
+            <br/>
+            <input type="submit" value="Sign Up" />
+          </form>
+        </div>
     )
   }
 }

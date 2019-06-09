@@ -10,9 +10,7 @@ class Home extends Component {
           <button className="navbarButton btn-default">skateSesh</button>
           <button className="navbarButton btn-default"><Link to="login">Login</Link></button>
         </div>
-        <div className="formContainer">
-          <SignUpForm />
-        </div>
+        <SignUpForm />
       </div>
     )
   }

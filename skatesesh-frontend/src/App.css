@@ -1,61 +1,11 @@
 
 .App {
   text-align: center;
-
-}
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: url('./IMG_0001.jpeg');
+  background-size: 100% 100%;
+  height: 700px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.SignUpContainer {
-  width:400px;
-  height:590px;
-  text-align:center;
-  background: white;
-  float: right;
-  border-radius: 40px;
-}
-
-input[type=text], select {
-  width: 60%;
-  padding: 15px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 30%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
 .UserImage {
   height: 180px;
@@ -65,6 +15,16 @@ input[type=submit] {
   margin-bottom: 10px;
   margin-left: 10px;
   border-radius: 40px;
+}
+
+.SignUpForm {
+  background-color: #FFFCFC;
+  height: 200px;
+  width: 258px;
+  margin-top: 170px;
+  margin-left: 485px;
+  border-radius: 14px;
+  /* opacity: 0.72; */
 }
 
 .SkateSection {
@@ -82,22 +42,14 @@ input[type=submit] {
 }
 
 .navbar {
-  height: 40px;
-  background-color: black;
+  height: 60px;
+  background-color: white;
 }
 
 .navbarButton {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
   border-radius: 5px;
-}
-
-.formContainer {
-  padding-top: 100px;
-  text-align: center;
-  background: url('./IMG_0001.jpeg');
-  background-size: 100% 100%;
-  height: 650px;
 }
 .loginFormContainer {
   padding-top: 100px;
