@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 
-class SkateSpotInfo extends Component {
+class SkateSpotInfo extends React.Component {
 
     render() {
+      console.log(this.props.selectedSkateSpot)
       return (
         <div className="SkateSpotInfo container shadow-sm p-3 mb-5 bg-white rounded">
           <h2>SkateSpot</h2>
@@ -14,7 +15,9 @@ class SkateSpotInfo extends Component {
           {this.props.selectedSkateSpot.rating}
           <h2>Vicinity:</h2>
           {this.props.selectedSkateSpot.vicinity}
-          <button className="btn btn-block btn-primary">Save</button>
+          <hr/>
+          {console.log(this.props)}
+          <button className="btn btn-block btn-primary" onClick={() => this.props.saveSkateSpot(this.props.selectedSkateSpot)}>Save</button>
         </div>
       )
     }

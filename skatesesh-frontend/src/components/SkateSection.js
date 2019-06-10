@@ -8,7 +8,6 @@ import SkateSpotInfo from './SkateSpotInfo'
 class SkateSection extends Component {
 
   render() {
-
     return (
       <div className="SkateSection container-fluid">
         <div className="row">
@@ -16,7 +15,7 @@ class SkateSection extends Component {
             <Map userLocation={this.props.userLocation} skateSpots={this.props.skateSpots} selectSkateSpot={this.props.selectSkateSpot} selectedSkateSpot={this.props.selectedSkateSpot}/>
             </div>
             <div className="col">
-              <SkateSpotInfo selectedSkateSpot={this.props.selectedSkateSpot}/>
+              <SkateSpotInfo selectedSkateSpot={this.props.selectedSkateSpot} saveSkateSpot={this.props.saveSkateSpot}/>
             </div>
         </div>
       </div>
