@@ -3,8 +3,8 @@ import SavedSkateSpot from './SavedSkateSpot'
 
 class SavedSkateSpots extends React.Component {
   render() {
-    console.log(this.props.savedSkateSpots)
-    let savedSkateSpots = this.props.savedSkateSpots.map(savedSkateSpot => <SavedSkateSpot savedSkateSpot={savedSkateSpot}/>)
+
+    let savedSkateSpots = this.props.savedSkateSpots.map(savedSkateSpot => <SavedSkateSpot savedSkateSpot={savedSkateSpot} removeSkateSpot={this.props.removeSkateSpot}/>)
     return  (
       <div className='savedSkateSpots'>
         {savedSkateSpots}

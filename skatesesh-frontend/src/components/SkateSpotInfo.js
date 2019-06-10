@@ -3,9 +3,8 @@ import React, {Component} from 'react'
 class SkateSpotInfo extends React.Component {
 
     render() {
-      console.log(this.props.selectedSkateSpot)
       return (
-        <div className="SkateSpotInfo container shadow-sm p-3 mb-5 bg-white rounded">
+        <div className="SkateSpotInfo container-fluid shadow-sm p-3 mb-5 bg-white rounded">
           <h2>SkateSpot</h2>
           <hr />
           <br/>
@@ -16,7 +15,6 @@ class SkateSpotInfo extends React.Component {
           <h2>Vicinity:</h2>
           {this.props.selectedSkateSpot.vicinity}
           <hr/>
-          {console.log(this.props)}
           <button className="btn btn-block btn-primary" onClick={() => this.props.saveSkateSpot(this.props.selectedSkateSpot)}>Save</button>
         </div>
       )

@@ -47,14 +47,20 @@ class Profile extends Component {
     })
   };
 
+  removeSkateSpot = (skateSpot) => {
+    this.setState({
+      savedSkateSpots: [...this.state.savedSkateSpots.filter(spot => spot !== skateSpot)]
+    })
+  }
+
   render() {
 
     return (
       <div>
         <navbar className='navbar'>
-          LogOut
+          <button className="btn">LogOut</button>
         </navbar>
-        <SavedSkateSpots savedSkateSpots={this.state.savedSkateSpots}/>
+        <SavedSkateSpots savedSkateSpots={this.state.savedSkateSpots} removeSkateSpot={this.removeSkateSpot} />
         <img className='profilePicture'/>
         <hr/>
         <SkateSection userLocation={this.state.currentLocation} skateSpots={this.state.skateSpots} selectSkateSpot={this.selectSkateSpot} selectedSkateSpot={this.state.selectedSkateSpot} saveSkateSpot={this.saveSkateSpot}/>
