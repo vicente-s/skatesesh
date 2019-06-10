@@ -6,13 +6,18 @@
   height: 700px;
 }
 
-.SignUpForm {
-  background-color: #FFFCFC;
-  height: 200px;
+form {
+  background-color: rgb(255, 255, 255, 0.75);
   width: 258px;
-  margin-top: 170px;
+  margin-top: 150px;
   margin-left: 485px;
   border-radius: 14px;
+}
+
+input[type=text] {
+  margin-top:4px;
+  width: 80%;
+  border-radius: 5px;
 }
 
 .SkateSection {
@@ -39,6 +44,7 @@
 
 .btn:hover {
   color: white;
+  border-color: white;
 }
 
 .savedSkateSpots {
@@ -60,6 +66,7 @@
   border-radius: 7px;
   margin-left: 40px;
   margin-top: 20px;
+  text-align: center;
 }
 .loginFormContainer {
   padding-top: 100px;

@@ -11,18 +11,21 @@ class Login extends Component {
       [e.target.name]: e.target.value
     })
   }
+  
 
   render() {
     return (
       <div>
         <div className="navbar">
-          <button className="navbarButton">Sign Up</button>
+          <button type="button" className="btn">Sign Up</button>
         </div>
         <div className="loginFormContainer">
           <form onSubmit={(e) => this.props.submitHandler(e, this.state)}>
+            <h5>UserName</h5>
             <input type="text" name="username" placeholder="UserName" value={this.state.username} onChange={this.changeHandler}/><br/>
+            <h5>Password</h5>
             <input type="text" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler}/><br/>
-            <input type="submit" value="Login" />
+            <input type="submit" value="Login" className="btn btn-info"/>
           </form>
         </div>
       </div>

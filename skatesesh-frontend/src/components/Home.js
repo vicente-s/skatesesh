@@ -7,8 +7,8 @@ class Home extends Component {
     return   (
       <div className="App" >
         <div className="navbar">
-          <button className="navbarButton btn-default">skateSesh</button>
-          <button className="navbarButton btn-default"><Link to="login">Login</Link></button>
+          <button className="btn">skateSesh</button>
+          <button className="btn"><Link to="login">Login</Link></button>
         </div>
         <SignUpForm />
       </div>

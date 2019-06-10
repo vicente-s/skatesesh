@@ -11,7 +11,6 @@ class App extends Component {
     user: {}
   }
 
-
   submitHandler = (e, user) => {
     e.preventDefault()
     fetch('http://localhost:3000/api/v1/login', {

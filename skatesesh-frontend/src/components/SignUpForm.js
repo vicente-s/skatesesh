@@ -41,7 +41,8 @@ class SignUpForm extends Component {
             <h5>Password</h5>
             <input type="text" placeholder="Password" name="password" value={this.state.password} onChange={this.changeHandler}/><br/>
             <br/>
-            <input type="submit" value="Sign Up" />
+            <input type="submit" value="Sign Up" className="btn btn-success"/>
+            <br/>
           </form>
         </div>
     )

@@ -53,12 +53,16 @@ class Profile extends Component {
     })
   }
 
+  logOut() {
+    localStorage.clear()
+    window.location.href = 'http://localhost:3001'
+  }
   render() {
-
+    console.log(this.props)
     return (
       <div>
         <navbar className='navbar'>
-          <button className="btn">LogOut</button>
+          <button className="btn" onClick={() => this.logOut()}>LogOut</button>
         </navbar>
         <SavedSkateSpots savedSkateSpots={this.state.savedSkateSpots} removeSkateSpot={this.removeSkateSpot} />
         <img className='profilePicture'/>

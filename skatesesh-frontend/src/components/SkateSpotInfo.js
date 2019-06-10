@@ -5,9 +5,8 @@ class SkateSpotInfo extends React.Component {
     render() {
       return (
         <div className="SkateSpotInfo container-fluid shadow-sm p-3 mb-5 bg-white rounded">
-          <h2>SkateSpot</h2>
+          <h2>Info</h2>
           <hr />
-          <br/>
           <h2>Name:</h2>
           {this.props.selectedSkateSpot.name}
           <h2>Rating:</h2>
