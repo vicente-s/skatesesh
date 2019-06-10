@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import SkateSection from './SkateSection'
+import SavedSkateSpots from './SavedSkateSpots'
 
 class Profile extends Component {
   state = {
     currentLocation: {},
     skateSpots: [],
-    selectedSkateSpot: {}
+    selectedSkateSpot: {},
+    savedSkateSpots: ["Les","157"]
     }
 
   // componentWillMount() {
@@ -49,10 +51,8 @@ class Profile extends Component {
         <navbar className='navbar'>
           LogOut
         </navbar>
+        <SavedSkateSpots savedSkateSpots={this.state.savedSkateSpots}/>
         <img className='profilePicture'/>
-        <div className='savedSkateSpots'>
-          Saved Skatespots
-        </div>
         <hr/>
         <SkateSection userLocation={this.state.currentLocation} skateSpots={this.state.skateSpots} selectSkateSpot={this.selectSkateSpot} selectedSkateSpot={this.state.selectedSkateSpot}/>
       </div>
