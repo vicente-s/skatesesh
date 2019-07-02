@@ -11,14 +11,11 @@ class Login extends Component {
       [e.target.name]: e.target.value
     })
   }
-  
+
 
   render() {
     return (
       <div>
-        <div className="navbar">
-          <button type="button" className="btn">Sign Up</button>
-        </div>
         <div className="loginFormContainer">
           <form onSubmit={(e) => this.props.submitHandler(e, this.state)}>
             <h5>UserName</h5>

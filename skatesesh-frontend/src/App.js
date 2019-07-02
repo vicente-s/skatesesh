@@ -4,11 +4,15 @@ import './App.css';
 import Home from './components/Home'
 import Login from './components/Login'
 import Profile from './components/Profile'
+import SkateTeams from './components/Teams'
+import Skaters from './components/Skaters'
+import Shop from './components/Shop'
+import NavBar from './components/NavBar'
 
 class App extends Component {
 
   state = {
-    user: {}
+    user: {},
   }
 
   submitHandler = (e, user) => {
@@ -45,10 +49,14 @@ class App extends Component {
   render() {
     return (
       <div>
+        <NavBar />
         <Switch>
-          <Route exact path='/' render={(props) => (<Home />)} />
-          <Route exact path='/login' render={(props) => (<Login submitHandler={this.submitHandler}/>)} />
-          <Profile exact path='/profile' render={(props) => (<Profile user={this.state.user}/>)} />
+          <Route exact path='/' render={ props => <Home /> } />
+          <Route exact path='/teams' render={ props => <SkateTeams /> }/>
+          <Route exact path='/skaters' render={ props => <Skaters /> } />
+          <Route exact path='/shop' render={ props => <Shop />} />
+          <Route exact path='/login' render={ props => <Login submitHandler={this.submitHandler}/> } />
+          <Profile exact path='/profile' render={ props => <Profile user={this.state.user}/> } />
         </Switch>
       </div>
     );
