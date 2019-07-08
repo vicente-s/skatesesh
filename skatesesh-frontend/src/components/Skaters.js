@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import SkaterCard from './SkaterCard'
 
 export default class Skaters extends Component {
 
@@ -15,13 +16,17 @@ export default class Skaters extends Component {
 
 
   render() {
-    let skaters = this.state.skaters.map( skater => <div>{skater.first_name} {skater.last_name}</div>)
+    let skaters = this.state.skaters.map( skater => <SkaterCard key={skater.id} skater={skater}/>)
     return(
       <div>
         <br/>
         <br/>
         <br/>
-        {skaters}
+        <div className="container">
+          <div className="row">
+            {skaters}
+          </div>
+        </div>
       </div>
     )
   }

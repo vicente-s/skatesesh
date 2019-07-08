@@ -3,7 +3,7 @@ class SkatersController < ApplicationController
 
   def index
     @skaters = Skater.all
-    render json: @skaters
+    render json: @skaters.to_json
   end
 
 

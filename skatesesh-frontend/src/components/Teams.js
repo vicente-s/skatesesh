@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import TeamCard from './TeamCard'
+
 
 export default class Teams extends Component {
 
@@ -13,13 +15,17 @@ export default class Teams extends Component {
   }
 
   render() {
-    let teams = this.state.teams.map( team => <div> {team.name} </div>)
+    let teams = this.state.teams.map( team => <TeamCard key={team.id} team={team} />)
     return (
       <div>
         <br/>
         <br/>
         <br/>
-        {teams}
+        <div className="container">
+          <div className="row">
+            {teams}
+          </div>
+        </div>
       </div>
     )
   }
