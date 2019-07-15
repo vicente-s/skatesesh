@@ -72,3 +72,15 @@
   font-weight: bold;
   color: white;
 }
+
+.card-img-top {
+  margin-top: 5px;
+  height: 150px;
+  border-radius: 2px;
+  border-style: solid;
+}
+
+.card-img {
+  height: 80%;
+  background-color: white;
+}
