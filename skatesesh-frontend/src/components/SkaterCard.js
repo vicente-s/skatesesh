@@ -8,7 +8,7 @@ export default class SkaterCard extends Component {
             <img src={this.props.skater.img} class="card-img-top" alt="..."/>
             <div className="card-body">
               <h5 className="card-title">{this.props.skater.first_name} {this.props.skater.last_name}</h5>
-              <a href="/currentSkater" className="btn btn-info"> More Info </a>
+              <a href="" className="btn btn-info"> More Info </a>
             </div>
           </div>
     )
