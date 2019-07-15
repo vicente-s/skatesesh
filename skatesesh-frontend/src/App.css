@@ -65,7 +65,8 @@
 
 .card {
   text-align: center;
-  height: 300px;
+  height: 40vh;
+  border-color: black;
 }
 
 .nav-link:hover {
@@ -75,9 +76,8 @@
 
 .card-img-top {
   margin-top: 5px;
-  height: 150px;
-  border-radius: 2px;
-  border-style: solid;
+  height: 50%;
+  border-style: groove;
 }
 
 .card-img {

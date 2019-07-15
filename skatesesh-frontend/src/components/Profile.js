@@ -35,7 +35,7 @@ class Profile extends Component {
         })
     }
 
-  selectSkateSpot = (skateSpot) =>{
+  selectSkateSpot = (skateSpot) => {
     this.setState({
       selectedSkateSpot: skateSpot
     })
