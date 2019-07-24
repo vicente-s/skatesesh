@@ -58,11 +58,10 @@ class App extends Component {
   }
 
   selectTeam = (e, selectedTeam) => {
-    e.preventDefault()
     this.setState({
       currentTeam: selectedTeam
     })
-    window.location.href='/currentTeam'
+    console.log(this.state.currentTeam)
   }
 
   render() {
