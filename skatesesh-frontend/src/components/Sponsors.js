@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import TeamCard from './TeamCard'
+import SponsorCard from './SponsorCard'
 
 
-export default class Teams extends Component {
+export default class Sponsors extends Component {
 
   render() {
 
-    let teams = this.props.teams.map( team => <TeamCard key={team.id} team={team} selectTeam={this.props.selectTeam}/>)
+    let sponsors = this.props.teams.map(sponsor => <SponsorCard key={sponsor.id} sponsor={sponsor}/>)
     return (
       <div>
         <br/>
@@ -14,7 +14,7 @@ export default class Teams extends Component {
         <br/>
         <div className="container">
           <div className="row">
-            {teams}
+            {sponsors}
           </div>
         </div>
       </div>

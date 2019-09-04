@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {Switch, Route, withRouter} from 'react-router-dom'
 import './App.css';
+import NavBar from './components/NavBar'
 import Home from './components/Home'
 import Login from './components/Login'
 import Profile from './components/Profile'
-import SkateTeams from './components/Teams'
+import Sponsors from './components/Sponsors'
 import Skaters from './components/Skaters'
-import Shop from './components/Shop'
+
 
 class App extends Component {
 
@@ -65,11 +66,11 @@ class App extends Component {
   render() {
     return (
       <div>
+        <NavBar />
         <Switch>
           <Route exact path='/' render={ props => <Home /> } />
-          <Route exact path='/teams' render={ props => <SkateTeams teams={this.state.teams} selectTeam={this.selectTeam}/> }/>
+          <Route exact path='/sponsors' render={ props => <Sponsors teams={this.state.teams} selectTeam={this.selectTeam}/> }/>
           <Route exact path='/skaters' render={ props => <Skaters skaters={this.state.skaters}/> } />
-          <Route exact path='/shop' render={ props => <Shop />} />
           <Route exact path='/login' render={ props => <Login submitHandler={this.submitHandler}/> } />
           <Profile exact path='/profile' render={ props => <Profile user={this.state.user}/> } />
         </Switch>
