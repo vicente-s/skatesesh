@@ -5,8 +5,10 @@ import SignUpForm from './SignUpForm'
 class Home extends Component {
   render() {
     return   (
-      <div className="App" >
-        
+      <div id="Home" >
+        <div className="title-container">
+          <h2>SkateSesh</h2>
+        </div>
       </div>
     )
   }
