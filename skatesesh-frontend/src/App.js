@@ -6,17 +6,13 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Profile from './components/Profile'
 import Sponsors from './components/Sponsors'
-import Skaters from './components/Skaters'
+import Athletes from './components/Athletes'
 
 
 class App extends Component {
 
   state = {
     user: {},
-    teams: [],
-    currentTeam: {},
-    skaters: [],
-    currentSkater: {},
   }
 
   submitHandler = (e, user) => {
@@ -50,28 +46,15 @@ class App extends Component {
     window.location.href = "/profile"
   }
 
-  componentWillMount() {
-    fetch('http://localhost:3000/teams')
-      .then(resp => resp.json())
-      .then(json => this.setState({ teams: json}))
-  }
-
-  selectTeam = (e, selectedTeam) => {
-    this.setState({
-      currentTeam: selectedTeam
-    })
-    console.log(this.state.currentTeam)
-  }
-
   render() {
     return (
       <div>
         <NavBar />
         <Switch>
           <Route exact path='/' render={ props => <Home /> } />
-          <Route exact path='/sponsors' render={ props => <Sponsors teams={this.state.teams} selectTeam={this.selectTeam}/> }/>
-          <Route exact path='/skaters' render={ props => <Skaters skaters={this.state.skaters}/> } />
-          <Route exact path='/login' render={ props => <Login submitHandler={this.submitHandler}/> } />
+          <Route exact path='/sponsors' render={ props => <Sponsors /> }/>
+          <Route exact path='/athletes' render={ props => <Athletes /> } />
+          <Route exact path='/login' render={ props => <Login submitHandler={this.submitHandler} /> } />
           <Profile exact path='/profile' render={ props => <Profile user={this.state.user}/> } />
         </Switch>
       </div>

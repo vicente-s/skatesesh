@@ -1,23 +1,30 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import SponsorCard from './SponsorCard'
 
 
 export default class Sponsors extends Component {
 
-  render() {
+  state = {
+    sponsors: []
+  }
 
-    let sponsors = this.props.teams.map(sponsor => <SponsorCard key={sponsor.id} sponsor={sponsor}/>)
+  componentWillMount() {
+    fetch('http://localhost:3000/sponsors')
+      .then(resp => resp.json())
+      .then(json => this.setState({ sponsors: json })
+    )
+  }
+
+
+  render() {
+    console.log(this.state.sponsors)
+    let sponsors = this.state.sponsors.map(sponsor => <SponsorCard key={sponsor.id} sponsor={sponsor}/>)
     return (
-      <div>
-        <br/>
-        <br/>
-        <br/>
         <div className="container">
           <div className="row">
             {sponsors}
           </div>
         </div>
-      </div>
     )
   }
 }

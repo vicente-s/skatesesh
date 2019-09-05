@@ -1,22 +1,21 @@
 import React, {Component} from 'react'
-import SkaterCard from './SkaterCard'
+import AthleteCard from './AthleteCard'
 
-export default class Skaters extends Component {
+export default class Athletes extends Component {
 
   state = {
-    skaters: []
+    athletes: []
   }
 
   componentWillMount() {
     fetch('http://localhost:3000/skaters')
       .then(resp => resp.json())
-      .then(json => this.setState({ skaters: json})
+      .then(json => this.setState({ athletes: json })
     )
   }
 
-
   render() {
-    let skaters = this.state.skaters.map( skater => <SkaterCard key={skater.id} skater={skater}/>)
+    let athletes = this.state.athletes.map( athlete => <AthleteCard key={athlete.id} athlete={athlete}/>)
     return(
       <div>
         <br/>
@@ -24,7 +23,7 @@ export default class Skaters extends Component {
         <br/>
         <div className="container">
           <div className="row">
-            {skaters}
+            {athletes}
           </div>
         </div>
       </div>
