@@ -18,9 +18,6 @@ export default class Athletes extends Component {
     let athletes = this.state.athletes.map( athlete => <AthleteCard key={athlete.id} athlete={athlete}/>)
     return(
       <div>
-        <br/>
-        <br/>
-        <br/>
         <div className="container">
           <div className="row">
             {athletes}
