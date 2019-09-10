@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :teams
-  resources :skaters
+  resources :athletes
   root 'teams#index'
 
   namespace :api do

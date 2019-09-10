@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SkaterTest < ActiveSupport::TestCase
+class AthletesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

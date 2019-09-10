@@ -1,2 +1,0 @@
-class Skater < ApplicationRecord
-end
