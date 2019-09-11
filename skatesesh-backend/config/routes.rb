@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :teams
+  resources :sponsors
   resources :athletes
-  root 'teams#index'
+  root 'sponsors#index'
 
   namespace :api do
     namespace :v1 do

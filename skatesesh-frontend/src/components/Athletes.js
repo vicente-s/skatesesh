@@ -8,7 +8,7 @@ export default class Athletes extends Component {
   }
 
   componentWillMount() {
-    fetch('http://localhost:3000/skaters')
+    fetch('http://localhost:3000/athletes')
       .then(resp => resp.json())
       .then(json => this.setState({ athletes: json })
     )

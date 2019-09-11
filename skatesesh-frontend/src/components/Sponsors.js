@@ -9,7 +9,7 @@ export default class Sponsors extends Component {
   }
 
   componentWillMount() {
-    fetch('http://localhost:3000/teams')
+    fetch('http://localhost:3000/sponsors')
       .then(resp => resp.json())
       .then(json => this.setState({ sponsors: json })
     )
