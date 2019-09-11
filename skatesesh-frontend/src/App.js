@@ -55,7 +55,7 @@ class App extends Component {
           <Route exact path='/sponsors' render={ props => <Sponsors /> }/>
           <Route exact path='/athletes' render={ props => <Athletes /> } />
           <Route exact path='/login' render={ props => <Login submitHandler={this.submitHandler} /> } />
-          <Profile exact path='/profile' render={ props => <Profile user={this.state.user}/> } />
+          <Route exact path='/profile' render={ props => <Profile user={this.state.user}/> } />
         </Switch>
       </div>
     );

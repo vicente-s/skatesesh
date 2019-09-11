@@ -4,7 +4,7 @@
 }
 
 .navbar{
-  font-size: 18px; 
+  font-size: 18px;
   background-color: black;
   font-family: 'Manjari', sans-serif;
 }
@@ -29,6 +29,24 @@
   font-family: 'Manjari', sans-serif;
   padding-top: 12%;
   text-align: center;
+}
+
+.LoginPage {
+  height: 100vh;
+  background-image: url('./IMG_0001.jpeg');
+  background-size: 100% 100%;
+  text-align: center;
+  padding-top: 10%;
+  padding-left: 30%;
+}
+
+.formContainer {
+  border: 5px black solid;
+  border-radius: 9px;
+  height: 370px;
+  width: 60%;
+  padding-top: 50px;
+  background-color: white;
 }
 
 .SkateSection {
@@ -64,13 +82,6 @@
   margin-top: 20px;
   text-align: center;
 }
-.loginFormContainer {
-  padding-top: 100px;
-  text-align: center;
-  background: url('./IMG_3524.jpeg');
-  background-size: 100% 100%;
-  height: 650px;
-}
 
 .SkateMap {
   margin-left: 50px;
@@ -95,10 +106,6 @@
   border-color: black;
 }
 
-
-
-
-
 .card-img-top {
   margin-top: 5px;
   height: 50%;
@@ -108,4 +115,8 @@
 .card-img {
   height: 80%;
   background-color: white;
+}
+
+.login-logo {
+  height: 40px;
 }

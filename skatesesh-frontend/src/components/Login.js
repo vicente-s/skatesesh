@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import google_logo from '../google_logo.png'
 
 class Login extends Component {
   state = {
@@ -15,8 +16,10 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-        <div className="loginFormContainer">
+      <div className="LoginPage">
+        <div className="formContainer">
+          <h3>Log In</h3>
+          <hr/>
           <form onSubmit={(e) => this.props.submitHandler(e, this.state)}>
             <h5>UserName</h5>
             <input type="text" name="username" placeholder="UserName" value={this.state.username} onChange={this.changeHandler}/><br/>
@@ -24,6 +27,8 @@ class Login extends Component {
             <input type="text" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler}/><br/>
             <input type="submit" value="Login" className="btn btn-info"/>
           </form>
+          <hr/>
+          Sign in with: <a href=""><img src={google_logo} className="login-logo" alt="Google Logo"/></a>
         </div>
       </div>
     )
