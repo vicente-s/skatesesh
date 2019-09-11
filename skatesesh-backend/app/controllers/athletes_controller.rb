@@ -6,5 +6,9 @@ class AthletesController < ApplicationController
     render json: @athletes.to_json
   end
 
+  def show
+    @athlete = Athlete.find(params[:id])
+    render json: @athlete.to_json
+  end
 
 end
