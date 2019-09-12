@@ -49,6 +49,42 @@
   background-color: white;
 }
 
+.athlete-info-page {
+  height: 100vh;
+  background-color: black;
+}
+
+.athlete-social-card {
+  border: 5px black solid;
+  background-color: white;
+  height: 100%;
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+
+.athlete-social-icons-row {
+  height: 50px;
+  width: 70px;
+}
+
+.athlete-info {
+  background-color: white;
+  height: 60%;
+  border: 5px black solid;
+}
+
+.athlete-info-description {
+  background-color: white;
+  height: 100%;
+}
+
+.athlete-video-parts {
+  height: 150px;
+  background-color: white;
+  border: 5px black solid;
+}
+
 .SkateSection {
   size: cover;
   position: absolute;
@@ -103,7 +139,7 @@
 .card {
   text-align: center;
   height: 40vh;
-  border-color: black;
+    border: 5px white solid;
 }
 
 .card-img-top {
@@ -113,10 +149,15 @@
 }
 
 .card-img {
-  height: 80%;
+  height: 100%;
   background-color: white;
 }
 
-.login-logo {
+.social-icon {
   height: 40px;
+}
+
+.sponsors, .athletes {
+  background-color: black;
+  height: 100vh;
 }

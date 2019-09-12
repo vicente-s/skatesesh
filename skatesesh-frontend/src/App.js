@@ -7,12 +7,18 @@ import Login from './components/Login'
 import Profile from './components/Profile'
 import Sponsors from './components/Sponsors'
 import Athletes from './components/Athletes'
+import AthleteInfoPage from './components/AthleteInfoPage'
 
 
 class App extends Component {
 
   state = {
     user: {},
+    athlete: {
+      first_name: "Mike Mo",
+      stance: "Regular",
+      sponsors: ["Girl", "Royal", "Spitfire","MOB","Bones Swiss","Diamond"]
+    }
   }
 
   submitHandler = (e, user) => {
@@ -54,6 +60,7 @@ class App extends Component {
           <Route exact path='/' render={ props => <Home /> } />
           <Route exact path='/sponsors' render={ props => <Sponsors /> }/>
           <Route exact path='/athletes' render={ props => <Athletes /> } />
+          <Route exact path='/athletes/1' render = { props => <AthleteInfoPage athlete = {this.state.athlete}/>} />
           <Route exact path='/login' render={ props => <Login submitHandler={this.submitHandler} /> } />
           <Route exact path='/profile' render={ props => <Profile user={this.state.user}/> } />
         </Switch>

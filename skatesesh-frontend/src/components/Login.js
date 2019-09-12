@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import google_logo from '../google_logo.png'
+import google_icon from '../google_icon.png'
 
 class Login extends Component {
   state = {
@@ -28,7 +28,7 @@ class Login extends Component {
             <input type="submit" value="Login" className="btn btn-info"/>
           </form>
           <hr/>
-          Sign in with: <a href=""><img src={google_logo} className="login-logo" alt="Google Logo"/></a>
+          Sign in with: <a href=""><img src={google_icon} className="website-icon" alt="Google Logo"/></a>
         </div>
       </div>
     )

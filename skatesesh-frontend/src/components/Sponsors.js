@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
 import SponsorCard from './SponsorCard'
 
 
@@ -20,7 +21,7 @@ export default class Sponsors extends Component {
     console.log(this.state.sponsors)
     let sponsors = this.state.sponsors.map(sponsor => <SponsorCard key={sponsor.id} sponsor={sponsor}/>)
     return (
-        <div className="container">
+        <div className="container sponsors">
           <div className="row">
             {sponsors}
           </div>
