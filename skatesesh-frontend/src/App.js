@@ -6,8 +6,10 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Profile from './components/Profile'
 import Sponsors from './components/Sponsors'
+import SponsorInfoPage from './components/SponsorInfoPage'
 import Athletes from './components/Athletes'
 import AthleteInfoPage from './components/AthleteInfoPage'
+import Spots from './components/Spots'
 
 
 class App extends Component {
@@ -18,6 +20,11 @@ class App extends Component {
       first_name: "Mike Mo",
       stance: "Regular",
       sponsors: ["Girl", "Royal", "Spitfire","MOB","Bones Swiss","Diamond"]
+    },
+    sponsor: {
+      name: "Nike SB",
+      image: "http://getwallpapers.com/wallpaper/full/4/3/7/636418.jpg",
+      website: "https://www.nikesb.com/"
     }
   }
 
@@ -59,10 +66,11 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={ props => <Home /> } />
           <Route exact path='/sponsors' render={ props => <Sponsors /> }/>
+          <Route exact path='/sponsors/nike-sb' render={ props => <SponsorInfoPage sponsor={this.state.sponsor} /> } />
           <Route exact path='/athletes' render={ props => <Athletes /> } />
           <Route exact path='/athletes/1' render = { props => <AthleteInfoPage athlete = {this.state.athlete}/>} />
           <Route exact path='/login' render={ props => <Login submitHandler={this.submitHandler} /> } />
-          <Route exact path='/profile' render={ props => <Profile user={this.state.user}/> } />
+          <Route exact path='/spots' render={ props => <Spots /> } />
         </Switch>
       </div>
     );

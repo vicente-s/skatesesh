@@ -18,7 +18,7 @@ export default class Sponsors extends Component {
 
 
   render() {
-    console.log(this.state.sponsors)
+
     let sponsors = this.state.sponsors.map(sponsor => <SponsorCard key={sponsor.id} sponsor={sponsor}/>)
     return (
         <div className="container sponsors">
