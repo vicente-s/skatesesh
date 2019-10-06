@@ -10,7 +10,7 @@ export default class Sponsors extends Component {
   }
 
   componentWillMount() {
-    fetch('http://localhost:3000/sponsors')
+    fetch('https://skatesesh.herokuapp.com/sponsors')
       .then(resp => resp.json())
       .then(json => this.setState({ sponsors: json })
     )
