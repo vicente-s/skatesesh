@@ -2,10 +2,6 @@ import React, {Component} from 'react'
 import google_icon from '../google_icon.png'
 
 class Login extends Component {
-  state = {
-    username: "",
-    password:""
-  }
 
   changeHandler = (e) => {
     this.setState({
@@ -16,19 +12,20 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="LoginPage">
-        <div className="formContainer">
-          <h3>Log In</h3>
-          <hr/>
-          <form onSubmit={(e) => this.props.submitHandler(e, this.state)}>
-            <h5>UserName</h5>
-            <input type="text" name="username" placeholder="UserName" value={this.state.username} onChange={this.changeHandler}/><br/>
-            <h5>Password</h5>
-            <input type="text" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler}/><br/>
-            <input type="submit" value="Login" className="btn btn-info"/>
+      <div className="login-page">
+        <div className="login-container">
+          <form className="login-form">
+            Login<hr/>
+            <label for="email" />Email:<br/>
+            <input type="email" name="email" /><br/><br/>
+            <label for="password" />Password:<br/>
+            <input type="password" name="password"/><br/><br/>
+            <input type='submit' value="Login"/>
           </form>
-          <hr/>
-          Sign in with: <a href=""><img src={google_icon} className="website-icon" alt="Google Logo"/></a>
+          <br/>
+          <div className="one-click-sign-in">
+            Sign in with: <button onClick={() => alert("this button should sign you in with google")}><img className="social-icon" src={google_icon}/></button>
+          </div>
         </div>
       </div>
     )

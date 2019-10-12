@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import instagram_icon from '../instagram_icon.png'
 
-export default class AthleteInfoPage extends Component {
+export default class AthletePage extends Component {
   render() {
     return (
       <div className="athlete-info-page">

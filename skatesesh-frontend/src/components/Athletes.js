@@ -17,8 +17,8 @@ export default class Athletes extends Component {
   render() {
     let athletes = this.state.athletes.map( athlete => <AthleteCard key={athlete.id} athlete={athlete}/>)
     return(
-      <div>
-        <div className="container athletes">
+      <div className="athletes">
+        <div className="container">
           <div className="row">
             {athletes}
           </div>

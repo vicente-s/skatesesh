@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import SponsorCard from './SponsorCard'
+import SponsorPage from './SponsorPage'
 
 
-export default class Sponsors extends Component {
+class Sponsors extends Component {
 
   state = {
     sponsors: []
   }
+
 
   componentWillMount() {
     fetch('https://skatesesh.herokuapp.com/sponsors')
@@ -16,16 +18,17 @@ export default class Sponsors extends Component {
     )
   }
 
-
   render() {
-
     let sponsors = this.state.sponsors.map(sponsor => <SponsorCard key={sponsor.id} sponsor={sponsor}/>)
     return (
-        <div className="container sponsors">
-          <div className="row">
-            {sponsors}
-          </div>
+      <div className="sponsors">
+        <div className="row">
+          {sponsors}
         </div>
+      </div>
     )
   }
+
 }
+
+export default Sponsors;

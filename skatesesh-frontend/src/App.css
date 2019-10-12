@@ -7,10 +7,11 @@
   font-size: 18px;
   background-color: black;
   font-family: 'Manjari', sans-serif;
+  box-shadow: 1px 5px 10px white;
 }
 
 .nav-link:hover {
-  border-bottom: 1px solid #03adfc;
+  text-shadow: 2px 2px 4px white;
 }
 
 #Home {
@@ -31,22 +32,27 @@
   text-align: center;
 }
 
-.LoginPage {
+.login-page {
+  padding-top: 150px;
+  padding-left: 350px;
   height: 100vh;
-  background-image: url('./IMG_0001.jpeg');
-  background-size: 100% 100%;
+  width: 100vw;
+  background-color: rgba(0,0,255,0.5);
   text-align: center;
-  padding-top: 10%;
-  padding-left: 30%;
 }
 
-.formContainer {
-  border: 5px black solid;
-  border-radius: 9px;
-  height: 370px;
-  width: 60%;
-  padding-top: 50px;
+.login-form {
+  height: 260px;
+  width: 600px;
   background-color: white;
+  border: 2px solid black;
+}
+
+.one-click-sign-in {
+  height: 60px;
+  width: 600px;
+  background-color: white;
+  border: 2px solid black;
 }
 
 .athlete-info-page, .sponsor-info-page {
@@ -148,8 +154,13 @@
 }
 
 .card-img {
-  height: 85%;
+  height: 80%;
   background-color: white;
+}
+
+.more-info-button {
+  height: 20%;
+  font-size: 20px;
 }
 
 .social-icon, .website-icon {
@@ -157,6 +168,6 @@
 }
 
 .sponsors, .athletes {
-  width: 1000vw;
+  padding-top: 20px;
   background-color: black;
 }

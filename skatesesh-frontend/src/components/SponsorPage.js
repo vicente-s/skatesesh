@@ -4,14 +4,15 @@ import instagram_icon from '../instagram_icon.png'
 import website_icon from '../website_icon.jpg'
 import twitter_icon from '../twitter_icon.png'
 
-export default class SponsorInfoPage extends Component {
+export default class SponsorPage extends Component {
 
   render() {
+    console.log("reached")
     return (
       <div className="sponsor-info-page">
         <div className="athlete-info">
           <div className="athlete-social-card container">
-            <img className="card-img-top"src={this.props.sponsor.image} />
+            <img className="card-img-top"src={this.props.sponsor.img} />
             <br/>
             <br/>
             <div className="row">

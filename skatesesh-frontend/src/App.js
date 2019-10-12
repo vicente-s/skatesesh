@@ -6,26 +6,16 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Profile from './components/Profile'
 import Sponsors from './components/Sponsors'
-import SponsorInfoPage from './components/SponsorInfoPage'
+import SponsorPage from './components/SponsorPage'
 import Athletes from './components/Athletes'
-import AthleteInfoPage from './components/AthleteInfoPage'
+import AthletePage from './components/AthletePage'
 import Spots from './components/Spots'
 
 
 class App extends Component {
 
   state = {
-    user: {},
-    athlete: {
-      first_name: "Mike Mo",
-      stance: "Regular",
-      sponsors: ["Girl", "Royal", "Spitfire","MOB","Bones Swiss","Diamond"]
-    },
-    sponsor: {
-      name: "Nike SB",
-      image: "http://getwallpapers.com/wallpaper/full/4/3/7/636418.jpg",
-      website: "https://www.nikesb.com/"
-    }
+    user: null,
   }
 
   submitHandler = (e, user) => {
@@ -56,7 +46,6 @@ class App extends Component {
           })
         })
     })
-    window.location.href = "/profile"
   }
 
   render() {
@@ -65,11 +54,10 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path='/' render={ props => <Home /> } />
-          <Route exact path='/sponsors' render={ props => <Sponsors /> }/>
-          <Route exact path='/sponsors/nike-sb' render={ props => <SponsorInfoPage sponsor={this.state.sponsor} /> } />
+          <Route exact path='/sponsors' render={ props => <Sponsors sponsors={this.state.sponsors} /> }/>
           <Route exact path='/athletes' render={ props => <Athletes /> } />
-          <Route exact path='/athletes/1' render = { props => <AthleteInfoPage athlete = {this.state.athlete}/>} />
-          <Route exact path='/login' render={ props => <Login submitHandler={this.submitHandler} /> } />
+          <Route exact path={`/athletes/1`} render = { props => <AthletePage athlete={this.state.athlete}/>}  />
+          <Route exact path='/login' render={ props => <Login submitHandler = {this.submitHandler} /> } />
           <Route exact path='/spots' render={ props => <Spots /> } />
         </Switch>
       </div>
