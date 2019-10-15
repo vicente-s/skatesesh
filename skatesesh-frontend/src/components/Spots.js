@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
-import SkateSection from './SkateSection'
 import SavedSkateSpots from './SavedSkateSpots'
+import Map from './Map'
+import SkateSpotInfo from './SkateSpotInfo'
+
 
 export default class Spots extends Component {
 
@@ -61,9 +63,15 @@ export default class Spots extends Component {
   render() {
 
     return (
-      <div>
-        {/* <SavedSkateSpots savedSkateSpots={this.state.savedSkateSpots} removeSkateSpot={this.removeSkateSpot} /> */}
-        <SkateSection userLocation={this.state.currentLocation} skateSpots={this.state.skateSpots} selectSkateSpot={this.selectSkateSpot} selectedSkateSpot={this.state.selectedSkateSpot} saveSkateSpot={this.saveSkateSpot}/>
+      <div className="SkateSection container-fluid">
+        <div className="row">
+            <div className="col">
+            <Map userLocation={this.state.currentLocation} skateSpots={this.state.skateSpots} selectSkateSpot={this.selectSkateSpot} selectedSkateSpot={this.props.selectedSkateSpot}/>
+            </div>
+            <div className="col">
+              <SkateSpotInfo selectedSkateSpot={this.state.selectedSkateSpot} saveSkateSpot={this.saveSkateSpot}/>
+            </div>
+        </div>
       </div>
     )
   }
