@@ -32,6 +32,23 @@
   text-align: center;
 }
 
+.spots-page {
+  background-color: black;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.spots-container {
+  text-align: center;
+  border: 5px solid white;
+  border-radius: 5px;
+  margin-left: 7%;
+}
+
+.skatespot-info {
+  margin-top: 10%;
+}
+
 .login-page {
   padding-top: 150px;
   text-align: center;
@@ -95,18 +112,6 @@
   border: 5px black solid;
 }
 
-.SkateSection {
-  size: cover;
-  position: absolute;
-}
-
-.SkateSpotInfo {
-  margin-top: 50px;
-  width: 480px;
-  border-radius: 15px;
-  text-align: center;
-}
-
 .savedSkateSpots {
   margin-top: 20px;
   margin-right: 80px;
@@ -128,11 +133,6 @@
   margin-top: 20px;
   text-align: center;
 }
-
-.SkateMap {
-  margin-left: 50px;
-}
-
 
 .profilePicture {
   height: 200px;
@@ -171,7 +171,7 @@
   height: 50px;
 }
 
-.sponsors, .athletes {
+.sponsors, .athletes-page {
   padding-top: 20px;
   background-color: black;
 }

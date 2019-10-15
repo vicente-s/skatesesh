@@ -4,7 +4,7 @@ class SkateSpotInfo extends React.Component {
 
     render() {
       return (
-        <div className="SkateSpotInfo container-fluid shadow-sm p-3 mb-5 bg-white rounded">
+        <div className="skatespot-info container-fluid shadow-sm p-3 mb-5 bg-white rounded">
           <h2>Info</h2>
           <hr />
           <h2>Name:</h2>

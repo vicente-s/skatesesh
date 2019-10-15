@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import SkateSection from './SkateSection'
 import SavedSkateSpots from './SavedSkateSpots'
 
 class Profile extends Component {
@@ -61,13 +60,7 @@ class Profile extends Component {
     console.log(this.props)
     return (
       <div>
-        <navbar className='navbar'>
-          <button className="btn" onClick={() => this.logOut()}>LogOut</button>
-        </navbar>
-        <SavedSkateSpots savedSkateSpots={this.state.savedSkateSpots} removeSkateSpot={this.removeSkateSpot} />
-        <img className='profilePicture'/>
-        <hr/>
-        <SkateSection userLocation={this.state.currentLocation} skateSpots={this.state.skateSpots} selectSkateSpot={this.selectSkateSpot} selectedSkateSpot={this.state.selectedSkateSpot} saveSkateSpot={this.saveSkateSpot}/>
+        
       </div>
     )
   }
