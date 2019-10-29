@@ -4,6 +4,7 @@
 }
 
 .navbar{
+  height: 15%;
   font-size: 18px;
   background-color: black;
   font-family: 'Manjari', sans-serif;
@@ -16,26 +17,33 @@
 
 #Home {
   background-color: black;
-  height: 100vh;
-  padding-top: 20%;
-  padding-left: 20%;
-  padding-right: 20%;
+  height: 95vh;
+  width: 100vw;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .title-container {
+  padding-bottom: 40px;
+  margin: auto;
+  height: 25%;
+  width: 80%;
+  color: white;
+  text-align: center;
+  font-family: 'Manjari', sans-serif;
   border: 5px solid #03adfc;
   border-radius: 9px;
-  height: 50%;
-  color: white;
-  font-family: 'Manjari', sans-serif;
-  padding-top: 12%;
-  text-align: center;
 }
 
 .spots-page {
   background-color: black;
   height: 100vh;
   padding-top: 100px;
+}
+
+#home-title {
+  position: relative;
+  top: 50%;
 }
 
 .spots-container {
