@@ -154,20 +154,10 @@
   margin-bottom: 5px;
 }
 
-.card {
-  text-align: center;
-  height: 40vh;
-  border: 5px white solid;
-}
-
-.card-img-top {
-  margin-top: 5px;
-  height: 50%;
-}
-
 .card-img {
-  height: 80%;
-  background-color: white;
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
 }
 
 .more-info-button {
@@ -182,4 +172,20 @@
 .sponsors, .athletes-page {
   padding-top: 20px;
   background-color: black;
+  display: grid;
+}
+
+.sponsor-card {
+  color: white;
+  padding: 20px;
+}
+
+.athlete-card {
+  color: white;
+}
+
+@media (max-width: 320px) {
+  .sponsors{
+    width: 100%;
+  }
 }
