@@ -169,23 +169,11 @@
   height: 50px;
 }
 
-.sponsors, .athletes-page {
-  padding-top: 20px;
+.sponsors, .athletes {
   background-color: black;
-  display: grid;
+  padding-top: 20px;
 }
 
 .sponsor-card {
   color: white;
-  padding: 20px;
-}
-
-.athlete-card {
-  color: white;
-}
-
-@media (max-width: 320px) {
-  .sponsors{
-    width: 100%;
-  }
 }

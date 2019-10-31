@@ -22,8 +22,10 @@ class Sponsors extends Component {
     let sponsors = this.state.sponsors.map(sponsor => <SponsorCard key={sponsor.id} sponsor={sponsor}/>)
     return (
       <div className="sponsors">
-        <div className="row">
-          {sponsors}
+        <div className="container">
+          <div className="row">
+            {sponsors}
+          </div>
         </div>
       </div>
     )
