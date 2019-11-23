@@ -7,7 +7,7 @@ class Home extends Component {
     return   (
       <div id="Home" >
           <div className="title-container">
-            <h1 id="home-title">SkateSesh</h1>
+            <h1 id="home-title">SkateSesh(beta)</h1>
           </div>
       </div>
     )
