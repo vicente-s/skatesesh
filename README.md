@@ -6,10 +6,6 @@ A social platform for skateboarders.
 
 As a long-time skateboarder, I wanted to build something for the skateboarding community.
 
-## Current features
-
-Users are able to find nearby skateparks
-
 ### ScreenShots
 
 ![Skatesesh Icon](./images/skatesesh_icon.jpg)
