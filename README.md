@@ -1,8 +1,22 @@
 # Skatesesh
 
-Web app built for skateboarders or anyone looking for information regarding the teams or pros. User is also able to find nearby skateparks based on their location. :thumbsup:
+A social platform for skateboarders.
 
-Utilizes Google's API to find local skateparks.
-Backend data for teams and professionals manually created.
+## Motivation
 
-Uses Ruby on Rails for the backend along with React and bootstrap for the front end.
+As a long-time skateboarder, I wanted to build something for the skateboarding community.
+
+## Current features
+
+Users are able to find nearby skateparks
+
+### ScreenShots
+
+![Skatesesh Icon](./images/skatesesh_icon.jpg)
+![Homepage](./images/homepage.png)
+![Search Preview](./images/search_preview.png)
+
+## Tech Used
+
+- [React.js](https://reactjs.org/)
+- [Ruby on Rails](https://rubyonrails.org/)
