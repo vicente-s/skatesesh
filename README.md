@@ -8,7 +8,6 @@ As a long-time skateboarder, I wanted to build something for the skateboarding c
 
 ### ScreenShots
 
-![Skatesesh Icon](./images/skatesesh_icon.jpg)
 ![Homepage](./images/homepage.png)
 ![Search Preview](./images/search_preview.png)
 
