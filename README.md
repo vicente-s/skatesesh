@@ -4,7 +4,7 @@ A social platform for skateboarders.
 
 ## Motivation
 
-As a long-time skateboarder, I wanted to build something for the skateboarding community.
+Skateboarding's always been a passion of mine. I wanted to build something for the skateboarding community.
 
 ### ScreenShots
 
